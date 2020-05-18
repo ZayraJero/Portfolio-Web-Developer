@@ -135,13 +135,64 @@ nav {
   display: none;
 }
 
+.project1,
+.project2,
+.project3 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  margin-left: 5%;
+}
+.project1 p,
+.project2 p,
+.project3 p {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 20px;
+}
 .project-makeup,
 .project-digi,
 .project-pm {
   display: flex;
-
-  align-content: center;
+  justify-content: center;
+  align-items: center;
   width: 45%;
+}
+
+.projects h4 {
+  text-align: center;
+}
+
+/*email*/
+.contact {
+  min-height: 50vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+.form-email {
+  flex: 3 1 40rem;
+}
+.form-email label {
+  display: block;
+  font-size: 25px;
+}
+.form-email input {
+  display: block;
+  margin: 3rem 0 rem;
+  padding: 1rem;
+  color: #000000;
+  border-color: #96c5e8;
+  font-size: 15px;
+}
+.form-email button {
+  margin-top: 5%;
+  width: 100%;
+  background: #ffffff;
+  font-size: 20px;
+  padding: 1rem;
 }
 
 /*footer*/
@@ -162,4 +213,88 @@ footer ul {
 footer h4 {
   flex: 3 1 40rem;
   font-size: calc(1.4rem + 1vw);
+}
+
+/*Responsive*/
+@media screen and (max-width: 842px) {
+  .burger {
+    position: relative;
+    display: block;
+    cursor: pointer;
+  }
+  .burger span {
+    padding: 0.2rem 2rem;
+    background: #e7eb43;
+    margin: 0.5rem 0rem;
+    display: block;
+    transition: all 0.5s ease;
+  }
+  .nav-links a {
+    color: #ffffff;
+    font-size: var(--header3);
+    text-decoration: underline;
+  }
+  .nav-links {
+    background: #96c5e8;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 1s ease;
+  }
+  .nav-open {
+    transform: translateX(-100%);
+  }
+  .toggle .line1 {
+    transform: rotateZ(45deg) translateY(300%);
+    background: #ffffff;
+  }
+  .toggle .line2 {
+    opacity: 0;
+  }
+  .toggle .line3 {
+    transform: rotateZ(-45deg) translateY(-300%);
+    background: #ffffff;
+  }
+  .intro-image img {
+    margin-left: 0%;
+    padding-bottom: 1rem;
+    align-content: center;
+    width: 95%;
+  }
+  /*project-section*/
+  .project-makeup,
+  .project-digi,
+  .project-pm {
+    width: 100%;
+  }
+  .project1,
+  .project2,
+  .project3 {
+  }
+  .project1 p,
+  .project2 p,
+  .project3 p {
+    justify-content: last baseline;
+    text-align: center;
+
+    font-size: 15px;
+  }
+  /*email*/
+  .contact img {
+    display: none;
+  }
+  .form-email input {
+    border-color: #000000;
+  }
+
+  /*footer*/
+  footer h4 {
+    font-size: 15px;
+    text-align: center;
+    padding: -5rem;
+  }
 }
